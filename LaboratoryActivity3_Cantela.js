@@ -63,7 +63,7 @@ Check if your base number + 10 is prime. Example: If base = 3 → check 13 → P
 
 function isPrime(n) {
     if (n < 2) return false;
-    for (let i = 2; i <= Math.sqrt(n); i++) {
+    for (let i = 2; i * i <= n; i++) { 
         if (n % i === 0) return false;
     }
     return true;
@@ -78,6 +78,7 @@ if (isPrime(numToCheck)) {
     console.log("Number: " + numToCheck + " → Not Prime");
 }
 console.log("______________________________________________\n");
+
 
 
 /*Problem 4: Multiplication Table
